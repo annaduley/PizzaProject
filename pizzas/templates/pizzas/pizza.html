@@ -3,16 +3,21 @@
 {% block content %}
 
 
-<p> Menu:{{pizza_id}} </p>
+<p> Toppings on {{pizza}} Pizza</p>
+<p style="text-align:center;"></p><img src=link alt="Pizza"></p>
 
 <ul> 
-    {% for t in toppings %}
-    <li>{{ t.text }} </li>    
-    
+    {% for topping in topping_name %}
+    <li>{{ topping }} </li>    
+
         {% empty %}
         <li> No toppings for this pizza. </li> 
         {% endfor %}
     
+
+        <p> 
+            <a href="{% url 'pizzas:comment' pizza.id %}"></a>
+        </p>
 </ul>
 
 {% endblock content %}

@@ -10,7 +10,7 @@ class Pizza(models.Model):
 
 class Topping(models.Model):
     pizza = models.ForeignKey(Pizza, on_delete= models.CASCADE)
-    topping = models.CharField(max_length=200)
+    topping_name = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"{self.topping[:50]}...."
+        return self.topping_name

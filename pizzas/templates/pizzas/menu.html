@@ -2,14 +2,13 @@
 
 {% block content %}
 
-
-<p> Menu </p>
+<p style="color:#95e8f3"> Menu </p>
 
 <ul> 
     {% for pizza in all_pizzas %}
     <li>
-        {{pizza}}
-        <!-- <a href= "{% url 'pizzas:pizza' pizza.id %}" {{pizza}} </a> -->
+      <!--  {{pizza}}-->
+       <a href= "{% url 'pizzas:pizza' pizza.id %}" </a> {{pizza}}
     </li>    
     
         {% empty %}
@@ -17,5 +16,7 @@
         {% endfor %}
     
 </ul>
+
+
 
 {% endblock content %}
